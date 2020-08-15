@@ -61,8 +61,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'core.urls'
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -79,6 +77,8 @@ TEMPLATES = [
     },
 ]
 
+ROOT_URLCONF = 'core.urls'
+AUTH_USER_MODEL = 'news.User'
 WSGI_APPLICATION = 'core.wsgi.application'
 
 
