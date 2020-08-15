@@ -1,0 +1,15 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block inner %}
+    <div class="d-flex" style="height: 100%">
+        <div class="m-auto">
+            <div style="font-size: 5rem">The News</div>
+            <a class="btn btn-secondary"
+                style="color:white; float:right"
+                href="{% url 'home' %}">Hey yo!</a>
+        </div>
+    </div>
+{% endblock %}
