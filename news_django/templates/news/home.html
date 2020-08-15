@@ -4,12 +4,19 @@
 {% block title %}{{title}}{% endblock %}
 
 {% block inner %}
-    <div class="d-flex" style="height: 100%">
-        <div class="m-auto">
-            <div style="font-size: 5rem">The News</div>
-            <a class="btn btn-secondary"
-                style="color:white; float:right"
-                href="{% url 'home' %}">Hey yo!</a>
+    <div class="d-flex container">
+        <div class="row">
+            {% for item in news_items %}
+            <div class="card border-dark m-2" style="width: 18rem;">
+                <img class="card-img-top" src="{% static 'img/submarine.png' %}" alt="alt">
+                <div class="card-body">
+                    <h5 class="card-title">{{item.title}}</h5>
+                    <p class="card-text">{{item.description}}</p>
+                </div>
+            </div>
+            {% empty %}
+            <div>No News</div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}
